@@ -71,34 +71,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
  
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Reset Password</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
+    <title>កំណត់ពាក្យសម្ងាត់ឡើងវិញ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
-        <h2>Reset Password</h2>
-        <p>Please fill out this form to reset your password.</p>
+        <h2>កំណត់ពាក្យសម្ងាត់ឡើងវិញ</h2>
+        <p>សូមបំពេញទម្រង់នេះដើម្បីកំណត់ពាក្យសម្ងាត់របស់អ្នកឡើងវិញ។</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
             <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
-                <label>New Password</label>
-                <input type="password" name="new_password" class="form-control" value="<?php echo $new_password; ?>">
+                <input type="password" name="new_password" class="fadeIn second" value="<?php echo $new_password; ?>" placeholder="ពាក្យសម្ងាត់ថ្មី">
                 <span class="help-block"><?php echo $new_password_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password" class="form-control">
+                <input type="password" name="confirm_password" class="fadeIn third" class="form-control" placeholder="បញ្ជាក់ពាក្យសម្ងាត់">
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <a class="btn btn-link" href="welcome.php">Cancel</a>
+            <div class="wrap">
+                <input type="submit" class="button" value="Submit">
+                <a class="btn btn-link" href="index.php">Cancel</a>
             </div>
         </form>
     </div>    
