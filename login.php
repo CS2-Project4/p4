@@ -119,7 +119,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <span class="help-block"><?php echo $password_err; ?></span>
         </div>
         <div class="wrap">
-            <button class="button">ចូលប្រើ</button>
+            <button class="button1">ចូលប្រើ</button>
         </div>
     </form>
 
