@@ -302,7 +302,7 @@ html, body {
   }
 
 .button1:hover {
-  background-color: #FF0000;
+  background-color: #E43B1E;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
   transform: translateY(-7px);
